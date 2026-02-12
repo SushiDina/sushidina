@@ -13,16 +13,10 @@
     --primary-dark: #8e2523;
     --dark: #000;
     --light: #fff;
-    --glass: rgba(255,255,255,0.05);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body {
+    margin: 0;
     font-family: 'Poppins', sans-serif;
     background: var(--dark);
     color: var(--light);
@@ -30,160 +24,45 @@ body {
 
 /* HEADER */
 header {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    background: #000;
 }
 
-/* LOGO AJUSTADO */
+/* LOGO */
 .logo img {
-    height: 70px;   /* controla tamanho visual */
+    height: 70px;
     width: auto;
 }
 
 /* NAV */
 nav {
     display: flex;
-    align-items: center;
     gap: 20px;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--light);
+    color: white;
     font-weight: 500;
-    transition: 0.3s ease;
 }
 
-nav a:hover {
-    color: var(--primary);
-}
-
-/* BUTTONS */
 .btn {
     padding: 10px 20px;
     border-radius: 30px;
     font-weight: 600;
-    transition: 0.3s ease;
 }
 
 .whatsapp-btn {
     background: var(--primary);
-    color: var(--light);
-}
-
-.whatsapp-btn:hover {
-    background: var(--primary-dark);
+    color: white;
 }
 
 .uber-btn {
     background: #06C167;
-    color: #000;
-}
-
-.uber-btn:hover {
-    opacity: 0.85;
-}
-
-/* HERO */
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-                url('https://images.unsplash.com/photo-1553621042-f6e147245754');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.hero-content {
-    max-width: 700px;
-}
-
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #ddd;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* CONTACTOS */
-.section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.section h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: var(--primary);
-}
-
-.contact-card {
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    line-height: 1.8;
-    font-size: 18px;
-}
-
-iframe {
-    width: 100%;
-    max-width: 900px;
-    height: 400px;
-    border: none;
-    border-radius: 15px;
-}
-
-/* FOOTER */
-footer {
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    background: #111;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .logo img {
-        height: 60px;
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
+    color: black;
 }
 </style>
 </head>
@@ -196,57 +75,10 @@ footer {
     </div>
 
     <nav>
-        <a href="#contactos">Contactos</a>
-
         <a href="https://wa.me/351917499688" target="_blank" class="btn whatsapp-btn">
             WhatsApp
         </a>
 
         <a href="https://www.ubereats.com/pt-en/store/sushidina/rf27V2ojRniPHpDFsONBsQ?srsltid=AfmBOopFVNc22qfC-o2VAsqrWqXnnyD0VcbtTBXbhONi0nXv6QJKJCcr"
            target="_blank"
-           class="btn uber-btn">
-            Uber Eats
-        </a>
-    </nav>
-</header>
-
-<section class="hero">
-    <div class="hero-content">
-        <h1>O Verdadeiro Sabor do Sushi</h1>
-        <p>Entrega rápida em Gulpilhares • Qualidade Premium • Aberto todos os dias</p>
-
-        <div class="hero-buttons">
-            <a href="https://wa.me/351917499688" target="_blank" class="btn whatsapp-btn">
-                Encomendar Agora
-            </a>
-
-            <a href="https://www.ubereats.com/pt-en/store/sushidina/rf27V2ojRniPHpDFsONBsQ?srsltid=AfmBOopFVNc22qfC-o2VAsqrWqXnnyD0VcbtTBXbhONi0nXv6QJKJCcr"
-               target="_blank"
-               class="btn uber-btn">
-                Pedir pela Uber Eats
-            </a>
-        </div>
-    </div>
-</section>
-
-<section id="contactos" class="section">
-    <h2>Contactos & Localização</h2>
-
-    <div class="contact-card">
-        📍 Continente Modelo de Gulpilhares, Vila Nova de Gaia<br>
-        📞 220 142 038<br>
-        💬 WhatsApp: 917 499 688<br>
-        🕒 11h–15h & 18h–21h<br>
-        📅 Aberto todos os dias
-    </div>
-
-    <iframe src="https://www.google.com/maps?q=Continente+Modelo+Gulpilhares&output=embed"></iframe>
-</section>
-
-<footer>
-    © 2026 SushiDina — O verdadeiro sabor do sushi, mais perto de ti.
-</footer>
-
-</body>
-</html>
-
+           class="btn uber-b
